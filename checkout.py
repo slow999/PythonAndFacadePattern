@@ -25,7 +25,7 @@ class BillingSystem:
     # ...
 
     def validate_credit_card(self):
-        return "Your credit is validated"
+        return "Your credit card is validated"
 
 
 class InventorySystem:
@@ -64,7 +64,8 @@ def client_code(facade: CheckoutFacade) -> None:
         {'id': 5, 'name': 'monitor', 'quantity': 2},
         {'id': 12, 'name': 'usb cables', 'quantity': 7}
     ]
-    facade.submit_order(items)
+    result = facade.submit_order(items)
+    print(result)
 
 
 if __name__ == '__main__':
